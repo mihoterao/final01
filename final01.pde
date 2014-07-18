@@ -9,8 +9,9 @@ void setup() {
   // 画面初期化
   size(800, 600);
   noStroke();
-  frameRate(30);
-  textSize(14);
+  frameRate(10);
+  textSize(20);
+  
 
   for (int i = 0; i < pos.length; i++) {
     pos[i] = new PVector();
@@ -26,8 +27,10 @@ void setup() {
 // 結果を表示
 void draw() {
   // 背景
-  background(0);
+  background(100);
   fill(225);
+ 
+  
 
   // 行と列の数だけ繰り返し  
   for (int i = 0; i < ene.data.length-1; i++) {
@@ -37,8 +40,9 @@ void draw() {
     if (value > 255) {
       value = 255;
     }
-    fill(31, 127, 255, 200);
+    fill(360, 100, 100, 100);
     ellipse(pos[i].x, pos[i].y, diameter, diameter);
+    
     
     if(pos[i]. x < 0 || pos[i].x > width ||
       pos[i].y < 0 || pos[i].y > height){
